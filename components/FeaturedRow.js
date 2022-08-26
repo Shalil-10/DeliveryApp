@@ -41,10 +41,11 @@ const FeaturedRow = ({ id, title, description }) => {
             >
 
                 {/* Restaurant Cards */}
+                {/* {console.log(restaurants)} */}
                 {restaurants?.map((restaurant) => (
                     <RestaurantCard
-                        key={restaurant.id}
-                        id={restaurant.id}
+                        key={restaurant._id}
+                        id={restaurant._id}
                         imgUrl={restaurant.image}
                         title={restaurant.name}
                         rating={restaurant.rating}

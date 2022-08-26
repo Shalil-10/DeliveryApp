@@ -11,14 +11,17 @@ import {
 import DishRow from '../../components/DishRow'
 import BasketIcon from '../../components/BasketIcon';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setRestaurant } from '../../features/restaurantSlice';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 const RestaurantScreen = () => {
 
     const dispatch = useDispatch()
     const navigation = useNavigation()
+
+
     // const route = useRoute()
     // const title = route.params.title
     const { params: {
@@ -80,7 +83,7 @@ const RestaurantScreen = () => {
                     </TouchableOpacity>
 
                 </View>
-                <View className='pb-28'>
+                <View className="pb-28">
                     <Text className='px-4 pt-5 mb-3 font-bold'>Menu</Text>
                     {/* DishRow */}
                     {dishes.map((dish) => (
